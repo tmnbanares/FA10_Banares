@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<body>
+			<div id="rndm#">
+			</div>
+			
+			<div id="brkdown">
+			</div>
+			
+			
+	<script>
+	var random;
+	var tenths;
+	var hundredths; 
+	var ones; 
+	
+	random = Math.floor(Math.random() * 1000); 
+	document.getElementById("rndm#").innerHTML="Randomly Generated Number: "+random; 
+	
+	tenths = (Math.floor(random%100/10)*10);
+	hundredths = (Math.floor(random/100)*100); 
+	ones = random%(tenths+hundredths);
+	
+	document.getElementById("brkdown").innerHTML = "Breakdown: " + hundredths + ", " + tenths + ", " + ones;
+	</script>
+	</body>
+</html>
